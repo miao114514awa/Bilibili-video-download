@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3205478721824020" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta name="X-Robots-Tag" content="index, follow">
+    <meta name="description" content="哔哩哔哩视频解析下载工具 - 免费在线视频提取和下载服务。支持B站、bilibili全平台视频解析，一键提取高清视频，支持多种清晰度选择。快速批量下载，无需安装软件，完全免费。立即体验最便捷的B站视频下载工具！">
+    <meta name="application-name" content="哔哩哔哩视频下载">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+
+    <meta name="keywords" content="B站视频下载,哔哩哔哩视频下载,Bilibili视频下载,B站视频保存,在线下载工具">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="哔哩哔哩视频下载">
+    <link rel="icon" href="website_icon.png.html" type="image/png">
+    <link rel="apple-touch-icon" href="website_icon.png.html">
+    <link rel="canonical" href="zh/bilibili.html">
+    <link rel="alternate" hreflang="x-default" href="bilibili.html">
+    <link rel="alternate" hreflang="en" href="bilibili.html">
+    <link rel="alternate" hreflang="zh" href="zh/bilibili.html">
+    <link rel="alternate" hreflang="ja" href="ja/bilibili.html">
+    <link rel="alternate" hreflang="es" href="es/bilibili.html">
+    <meta property="og:title" content="哔哩哔哩(bilibili)视频解析下载 - 免费B站视频在线下载">
+    <meta property="og:description" content="哔哩哔哩视频视频解析下载工具是一个免费的站视频在线解析提取工具,支持提取B站APP和bilibili网站上的任何视频,提供在线的视频分析功能,我们可以帮助您下载各方视频把视频保存到手机相册查看电脑播放。">
+    <meta property="og:url" content="https://video.culip.top/zh/bilibili">
+    <meta property="og:site_name" content="SaveAny">
+    <meta property="og:image" content="https://video.culip.top/images/og.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:author" content="SaveAny">
+    <meta property="article:modified_time" content="2024-03-20">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="哔哩哔哩(bilibili)视频解析下载 - 免费B站视频在线下载">
+    <meta name="twitter:description" content="哔哩哔哩视频视频解析下载工具是一个免费的站视频在线解析提取工具,支持提取B站APP和bilibili网站上的任何视频,提供在线的视频分析功能,我们可以帮助您下载各方视频把视频保存到手机相册查看电脑播放。">
+    <meta name="twitter:image" content="https://video.culip.top/images/og.png">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "哔哩哔哩视频下载工具",
+            "description": "在线哔哩哔哩视频解析下载工具,支持解析并转存B站网站和APP上的任何视频到用户本地",
+            "url": "https://video.culip.top/zh/bilibili",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "All"
+        }
+    </script>
+    <title>B站视频下载</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/bili_input_styles.css">
+    <style>
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: "PingFang SC", HarmonyOS_Regular, "Helvetica Neue", "Microsoft YaHei", sans-serif;
+        }
+
+        /* 设置最小宽度和响应式布局 */
+
+        main {
+            min-width: 320px;
+            width: 100%;
+            max-width: 1024px;
+            padding: 0 16px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 4px;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 768px) {
+            main {
+                margin-top: 32px;
+            }
+            h1 {
+                font-size: 2rem !important;
+                margin-bottom: 1rem !important;
+            }
+            .input-group {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .input-group input[type="text"] {
+                width: 100%;
+                min-height: 40px;
+            }
+            .input-group button {
+                width: 100%;
+                min-height: 40px;
+            }
+            .clear-input {
+                right: 8px;
+            }
+            /* 按钮组样式 */
+            .text-gray-400.text-lg {
+                flex-direction: column;
+                align-items: center;
+            }
+            .text-gray-400.text-lg a {
+                width: 100%;
+                max-width: 280px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                justify-content: center;
+            }
+            .text-gray-400.text-lg i {
+                flex-shrink: 0;
+            }
+        }
+
+        .error-message {
+            color: #999;
+            font-size: 12px;
+            height: 16px;
+            margin-bottom: 4px;
+            padding-left: 0;
+            margin-left: 0;
+            text-align: left;
+        }
+
+        .clear-input {
+            position: absolute;
+            right: 120px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #999;
+            padding: 4px;
+            display: none;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .description {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+            .features {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+
+        .chrome-store-button {
+            background-color: transparent;
+            color: #2D2D2D;
+            border: 2px solid #2D2D2D;
+            padding: 8px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            /* transition: all 0.2s ease; */
+        }
+
+        .chrome-store-button:hover {
+            background-color: #2D2D2D;
+            color: white;
+        }
+
+        .buttons-group {
+            position: absolute;
+            top: calc(20vh + 600px);
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #4171ff, #3451b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .custom-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .download-button {
+            background: linear-gradient(45deg, #4171ff, #3451b2);
+            transition: all 0.3s ease;
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(65, 113, 255, 0.3);
+        }
+
+        .store-button {
+            transition: all 0.3s ease;
+        }
+
+        .store-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .step-connector {
+            background: linear-gradient(90deg, transparent 50%, #e5e7eb 50%);
+            background-size: 20px 2px;
+            background-repeat: repeat-x;
+        }
+
+        .step-circle {
+            transition: all 0.3s ease;
+        }
+
+        .step-circle:hover {
+            transform: scale(1.1);
+            border-color: #4171ff;
+            color: #4171ff;
+        }
+    </style>
+    <style>
+        /* 添加页脚样式 */
+
+        .footer {
+            padding: 2rem 0;
+            margin-top: 4rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer {
+                padding: 1.5rem 0;
+                margin-top: 3rem;
+            }
+        }
+    </style>
+    <script defer="defer" src="js/main.3b8f26ab22170121f64e.js"></script>
+</head>
+
+<body>
+    <nav class="navbar"><a href="index.html" class="logo">SaveAny 任意下载</a>
+        <div class="main-menu"><a href="index.html">哔哩哔哩</a> <a href="https://saveany.cn/youtube.html">Instagram</a> <a href="douyin.html">抖音</a> <a href="xiaohongshu.html">小红书</a> <a href="tiktok.html">TikTok</a></div>
+        <div class="nav-links"><a href="https://chromewebstore.google.com/detail/bilibili%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B/nofnlfoeakknlgbkgpemfemkofdcpfke?authuser=0&hl=en">Chrome 插件</a> <a href="https://greasyfork.org/en/scripts/514865-bilibili%E5%93%94%E5%93%A9%E5%93%A9%E5%93%A9%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E6%8C%89%E9%92%AE"
+                target="_blank" rel="noopener noreferrer">油猴脚本</a> <a href="contact.html">About</a></div>
+    </nav>
+    <div class="min-h-screen flex flex-col">
+        <main class="max-w-5xl mx-auto mt-48 text-center px-4 flex-grow">
+            <h1 class="text-6xl font-bold mb-6"><span class="gradient-text">BiliBili</span> <span class="text-gray-800">视频下载</span></h1>
+            <h2 class="text-gray-400 text-lg mb-16 max-w-3xl mx-auto">免费的哔哩哔哩视频下载器，无水印、无损视频质量，免费、简单快速</h2>
+            <div class="flex justify-center mb-20">
+                <div class="flex w-full max-w-2xl"><input id="urlInput" placeholder="在这里粘贴您的视频链接" class="flex-grow px-6 py-4 rounded-l-xl text-lg border border-gray-200 focus:outline-none focus:border-blue-400 transition-colors"> <button onclick="downloadVideo()" id="downloadBtn" class="download-button text-white px-10 py-4 rounded-r-xl flex items-center font-semibold text-lg"><i id="downloadIcon" class="fas fa-download mr-3"></i> <span id="downloadText">下载</span><div id="loadingSpinner" class="hidden animate-spin mr-3"><i class="fas fa-circle-notch"></i></div></button></div>
+            </div>
+            <div id="errorMessage" class="text-red-500 mt-8"></div>
+            <div id="videoInfo" class="mt-4 hidden">
+                <div id="downloadResult" class="px-6 py-3 rounded-xl text-lg border border-gray-200 bg-white shadow-sm"></div>
+            </div>
+            <div class="mt-12">
+                <h2 class="text-xl font-semibold text-gray-800 mb-6">安装插件更方便</h2>
+                <div class="flex justify-center gap-4"><a href="https://chromewebstore.google.com/detail/nofnlfoeakknlgbkgpemfemkofdcpfke" target="_blank" class="flex items-center p-4 rounded-lg bg-white border border-gray-200 hover:border-blue-400 transition-all duration-200 group w-56 hover:shadow-md"><i class="fab fa-chrome text-2xl text-gray-600 group-hover:text-blue-500 mr-3"></i><div><h3 class="text-base font-medium text-gray-800">Chrome 插件</h3><p class="text-xs text-gray-500">插件版本，便捷下载</p></div></a>
+                    <a
+                        href="https://greasyfork.org/zh-CN/scripts/514865-bilibili%E5%93%94%E5%93%A9%E5%93%A9%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E6%8C%89%E9%92%AE" target="_blank" class="flex items-center p-4 rounded-lg bg-white border border-gray-200 hover:border-blue-400 transition-all duration-200 group w-56 hover:shadow-md"><i class="fas fa-user-astronaut text-2xl text-gray-600 group-hover:text-blue-500 mr-3"></i>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800">油猴脚本</h3>
+                            <p class="text-xs text-gray-500">油猴Tampermonkey版本</p>
+                        </div>
+                        </a>
+                </div>
+            </div>
+            <div class="mt-12">
+                <h2 class="text-xl font-semibold text-gray-800 mb-6">常见问题</h2>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <div class="border border-gray-200 rounded-lg"><button class="w-full px-4 py-3 text-left flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(this)"><span class="font-medium">电脑上部分浏览器点下载视频按钮后，跳转到视频播放页面，如何下载到本地？</span> <i class="fas fa-chevron-down transform transition-transform"></i></button>
+                        <div
+                            class="hidden px-4 py-3 border-t border-gray-200 text-gray-600 text-left">这种情况通常是浏览器默认行为导致的，您可以：
+                            <ul class="list-disc ml-5 mt-2">
+                                <li>右键点击下载按钮，选择"链接另存为"</li>
+                                <li>或使用我们的浏览器插件，可以更方便地下载</li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg"><button class="w-full px-4 py-3 text-left flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(this)"><span class="font-medium">Android手机可以下载保存视频吗？</span> <i class="fas fa-chevron-down transform transition-transform"></i></button>
+                    <div
+                        class="hidden px-4 py-3 border-t border-gray-200 text-gray-600 text-left">可以的，Android手机可以直接下载保存视频。建议使用Chrome浏览器访问本站，这样可以获得最佳下载体验。</div>
+            </div>
+            <div class="border border-gray-200 rounded-lg"><button class="w-full px-4 py-3 text-left flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(this)"><span class="font-medium">iOS设备（iPhone、iPad）上点击下载视频按钮后，跳转到视频页面，并没有直接下载，怎么办？</span> <i class="fas fa-chevron-down transform transition-transform"></i></button>
+                <div
+                    class="hidden px-4 py-3 border-t border-gray-200 text-gray-600 text-left">由于iOS系统的限制，建议您：
+                    <ul class="list-disc ml-5 mt-2">
+                        <li>长按下载按钮，选择"下载链接文件"</li>
+                        <li>或使用第三方下载器APP进行下载</li>
+                    </ul>
+            </div>
+    </div>
+    <div class="border border-gray-200 rounded-lg"><button class="w-full px-4 py-3 text-left flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(this)"><span class="font-medium">下载后的文件打不开怎么办？</span> <i class="fas fa-chevron-down transform transition-transform"></i></button>
+        <div
+            class="hidden px-4 py-3 border-t border-gray-200 text-gray-600 text-left">这种情况比较少见，通常是文件后缀名的问题：
+            <ul class="list-disc ml-5 mt-2">
+                <li>视频文件：将文件后缀改为".mp4"即可播放</li>
+                <li>图片文件：将文件后缀改为".jpg"即可查看</li>
+            </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </main>
+    <footer class="w-full py-8">
+        <div class="max-w-5xl mx-auto px-8">
+            <h3 class="text-xl font-medium text-transparent mb-4 text-center">相关链接</h3>
+            <div class="text-center flex justify-center gap-4"><a href="privacy.html" target="_blank" class="text-gray-400 hover:text-gray-600 text-m">Privacy Policy </a><span class="text-gray-400 text-m">|</span> <a href="terms_of_use.html" target="_blank" class="text-gray-400 hover:text-gray-600 text-m">Terms of Use </a>
+                <span
+                    class="text-gray-400 text-m">|</span> <a href="https://saveany.cn/cdn-cgi/l/email-protection#a8dbddd8d8c7dadce8dbc9decdc9c6d186cbc6" target="_blank" class="text-gray-400 hover:text-gray-600 text-m">Contact us</a></div>
+        </div>
+    </footer>
+    </div>
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="bili_index_download.js.html"></script>
+    <script src="get_video_info.js.html"></script>
+    <script src="related-extensions.js.html"></script>
+    <script>
+        // 加载导航栏
+        fetch('./components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+
+        // 添加清空按钮的功能
+        const urlInput = document.getElementById('urlInput');
+        const clearInput = document.getElementById('clearInput');
+
+        urlInput.addEventListener('input', function() {
+            clearInput.style.display = this.value ? 'block' : 'none';
+        });
+
+        clearInput.addEventListener('click', function() {
+            urlInput.value = '';
+            this.style.display = 'none';
+        });
+
+        async function downloadVideo() {
+            const downloadBtn = document.getElementById('downloadBtn');
+            const downloadIcon = document.getElementById('downloadIcon');
+            const downloadText = document.getElementById('downloadText');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const url = document.getElementById('urlInput').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            if (!url) {
+                errorMessage.textContent = '哎呀，不是有效的 B 站链接';
+                setTimeout(() => {
+                    errorMessage.textContent = '';
+                }, 1000);
+                return;
+            }
+
+            // 显示加载状态
+            downloadIcon.classList.add('hidden');
+            downloadText.textContent = '处理中...';
+            loadingSpinner.classList.remove('hidden');
+            downloadBtn.disabled = true;
+
+            try {
+                const downloadInfo = await constructDownloadInfo(url);
+                console.log('下载信息:', downloadInfo);
+
+                const resultHtml = `
+                    <p class="result-text"><strong>视频 BV 号：</strong>${downloadInfo.bvid}</p>
+                    <p class="result-text"><strong>下载链接：</strong><a href="${downloadInfo.downloadUrl}.html" target="_blank" class="download-link"><span class="url-preview">${downloadInfo.downloadUrl.substring(0, 80)}...</span></a></p>
+                `;
+                document.getElementById('downloadResult').innerHTML = resultHtml;
+                document.getElementById('videoInfo').style.display = 'block';
+
+            } catch (error) {
+                console.error('下载失败:', error);
+                errorMessage.textContent = '哎呀，不是有效的B 站链接';
+                setTimeout(() => {
+                    errorMessage.textContent = '';
+                }, 1000);
+            } finally {
+                // 恢复按钮状态
+                downloadIcon.classList.remove('hidden');
+                downloadText.textContent = '下载';
+                loadingSpinner.classList.add('hidden');
+                downloadBtn.disabled = false;
+            }
+        }
+    </script>
+    <script>
+        // 在页面加载完成后加载相关扩展
+        document.addEventListener('DOMContentLoaded', function() {
+            loadRelatedExtensions();
+        });
+    </script>
+    <script>
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+    </script>
+    <div class="product-cards"></div>
+</body>
+
+</html>

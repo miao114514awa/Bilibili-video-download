@@ -1,0 +1,103 @@
+body, button, input, select, textarea {
+    font-family: "PingFang SC", HarmonyOS_Regular, "Helvetica Neue", "Microsoft YaHei", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    background-image: url('https://s1.hdslb.com/bfs/static/blive/blfe-message-web/static/img/light_bg.8e46311e.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.title {
+    font-family: 'Microsoft YaHei', 'Microsoft Sans Serif', 'Microsoft SanSerif', '微软雅黑';
+    color: #00aeec;
+}
+
+.url-input {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.download-button {
+    padding: 10px 20px;
+    background-color: #00aeec;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: #0091c2;
+}
+
+.video-info {
+    margin-top: 20px;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+.result-text {
+    font-family: 'PingFang SC', HarmonyOS_Regular, 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+    font-size: 14px;
+    line-height: 18.9px;
+    text-align: left;
+    letter-spacing: normal;
+    color: #61666d;
+    /* 添加以下属性 */
+    display: flex;
+    align-items: center;
+    gap: 8px;  /* 设置元素之间的间距 */
+}
+
+.download-link {
+    color: #00a1d6;
+    text-decoration: none;
+    /* 添加以下属性 */
+    flex: 1;
+    min-width: 0;  /* 允许flex item收缩到比内容更小 */
+}
+
+.url-preview {
+    font-family: 'PingFang SC', HarmonyOS_Regular, 'Helvetica Neue', 'Microsoft YaHei', sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    color: #61666d;
+    background-color: #f1f2f3;
+    border-radius: 6px;
+    padding: 2px 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 修改display属性 */
+    display: block;
+}
+
+.main-menu a {
+    color: inherit;  /* 继承父元素颜色 */
+    text-decoration: none;
+    transition: color 0.3s ease;  /* 添加颜色过渡动画 */
+}
+
+.main-menu a:hover {
+    color: #00A1D6;  /* 鼠标悬停时的颜色 */
+}
