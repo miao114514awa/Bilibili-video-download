@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3205478721824020" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta name="X-Robots-Tag" content="index, follow">
+    <meta name="description" content="关于我们 - CulipVideo，致力于提供便捷的视频下载工具，支持多个平台的视频解析和下载服务。">
+    <meta name="application-name" content="关于我们">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <link rel="icon" href="website_icon.png.html">
+    <meta name="keywords" content="关于我们, CulipVideo, 视频下载工具">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="关于我们">
+    <link rel="icon" href="logo.png">
+    <link rel="apple-touch-icon" href="website_icon.png.html">
+    <link rel="canonical" href="zh/about.html">
+    <link rel="alternate" hreflang="x-default" href="about.html">
+    <link rel="alternate" hreflang="en" href="about.html">
+    <link rel="alternate" hreflang="zh" href="zh/about.html">
+    <link rel="alternate" hreflang="ja" href="ja/about.html">
+    <link rel="alternate" hreflang="es" href="es/about.html">
+    <meta property="og:title" content="关于我们 - CulipVideo">
+    <meta property="og:description" content="CulipVideo 是一个致力于提供便捷视频下载工具的平台，支持多个平台的视频解析和下载服务。">
+    <meta property="og:url" content="https://video.culip.top/zh/about">
+    <meta property="og:site_name" content="SaveAny">
+    <meta property="og:image" content="https://video.culip.top/images/og.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="article:author" content="Culip">
+    <meta property="article:modified_time" content="2024-03-20">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="关于我们 - CulipVideo">
+    <meta name="twitter:description" content="CulipVideo 是一个致力于提供便捷视频下载工具的平台，支持多个平台的视频解析和下载服务。">
+    <meta name="twitter:image" content="https://video.culip.top/images/og.png">
+    <script type="application/ld+json">
+        {
+            "@context": "https://video.culip.top",
+            "@type": "WebApplication",
+            "name": "CulipVideo",
+            "description": "CulipVideo 是一个致力于提供便捷视频下载工具的平台，支持多个平台的视频解析和下载服务。",
+            "url": "https://video.culip.top/about",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "All"
+        }
+    </script>
+    <title>关于我们</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/bili_input_styles.css">
+    <style>
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: "PingFang SC", HarmonyOS_Regular, "Helvetica Neue", "Microsoft YaHei", sans-serif;
+        }
+
+        /* 设置最小宽度和响应式布局 */
+
+        main {
+            min-width: 320px;
+            width: 100%;
+            max-width: 1024px;
+            padding: 0 16px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            margin-top: 120px; /* 添加顶部间距，确保内容不会被导航栏遮挡 */
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 4px;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 768px) {
+            main {
+                margin-top: 32px;
+            }
+            h1 {
+                font-size: 2rem !important;
+                margin-bottom: 1rem !important;
+            }
+            .input-group {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .input-group input[type="text"] {
+                width: 100%;
+                min-height: 40px;
+            }
+            .input-group button {
+                width: 100%;
+                min-height: 40px;
+            }
+            .clear-input {
+                right: 8px;
+            }
+            /* 按钮组样式 */
+            .text-gray-400.text-lg {
+                flex-direction: column;
+                align-items: center;
+            }
+            .text-gray-400.text-lg a {
+                width: 100%;
+                max-width: 280px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                justify-content: center;
+            }
+            .text-gray-400.text-lg i {
+                flex-shrink: 0;
+            }
+        }
+
+        .error-message {
+            color: #999;
+            font-size: 12px;
+            height: 16px;
+            margin-bottom: 4px;
+            padding-left: 0;
+            margin-left: 0;
+            text-align: left;
+        }
+
+        .clear-input {
+            position: absolute;
+            right: 120px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #999;
+            padding: 4px;
+            display: none;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .description {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+            .features {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+
+        .chrome-store-button {
+            background-color: transparent;
+            color: #2D2D2D;
+            border: 2px solid #2D2D2D;
+            padding: 8px 24px;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            /* transition: all 0.2s ease; */
+        }
+
+        .chrome-store-button:hover {
+            background-color: #2D2D2D;
+            color: white;
+        }
+
+        .buttons-group {
+            position: absolute;
+            top: calc(20vh + 600px);
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        /* 优化平滑过渡效果，使用 transform 和 opacity */
+        .faq-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .faq-content.open {
+            max-height: 1000px; /* 设置足够大的值以适应内容 */
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        /* 添加页脚样式 */
+
+        .footer {
+            padding: 2rem 0;
+            margin-top: 4rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .footer {
+                padding: 1.5rem 0;
+                margin-top: 3rem;
+            }
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #4171ff, #3451b2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .custom-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .download-button {
+            background: linear-gradient(45deg, #4171ff, #3451b2);
+            transition: all 0.3s ease;
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(65, 113, 255, 0.3);
+        }
+
+        .store-button {
+            transition: all 0.3s ease;
+        }
+
+        .store-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .step-connector {
+            background: linear-gradient(90deg, transparent 50%, #e5e7eb 50%);
+            background-size: 20px 2px;
+            background-repeat: repeat-x;
+        }
+
+        .step-circle {
+            transition: all 0.3s ease;
+        }
+
+        .step-circle:hover {
+            transform: scale(1.1);
+            border-color: #4171ff;
+            color: #4171ff;
+        }
+    </style>
+    <script defer="defer" src="js/main.3b8f26ab22170121f64e.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">CulipVideo</a>
+        <div class="main-menu">
+            <a href="bilibili.html">哔哩哔哩</a>
+            <a href="youtube.html">YouTube</a>
+            <a href="douyin.html">抖音</a>
+            <a href="xiaohongshu.html">小红书</a>
+            <a href="tiktok.html">TikTok</a>
+        </div>
+        <div class="nav-links">
+            <a href="contact.html">联系我们</a>
+            <a href="about.html" class="active">关于我们</a>
+        </div>
+    </nav>
+    <div class="min-h-screen flex flex-col">
+        <main class="max-w-5xl mx-auto mt-48 text-center px-4 flex-grow">
+            <h1 class="text-6xl font-bold mb-6" style="margin-top: 0px;">
+                <span class="gradient-text">关于我们</span>
+            </h1>
+            <h2 class="text-gray-400 text-lg mb-16 max-w-3xl mx-auto">CulipVideo 是一个致力于提供便捷视频下载工具的平台，支持多个平台的视频解析和下载服务。</h2>
+            <div class="mt-12">
+                <h2 class="text-xl font-semibold text-gray-800 mb-6">我们的使命</h2>
+                <p class="text-gray-600 text-center max-w-3xl mx-auto">
+                    我们的目标是让用户能够轻松地下载和保存他们喜欢的视频，无论这些视频来自哪个平台。我们致力于提供简单、快速且安全的视频下载工具，帮助用户更好地享受数字内容。
+                </p>
+            </div>
+            <div class="mt-12">
+                <h2 class="text-xl font-semibold text-gray-800 mb-6">我们的团队</h2>
+                <p class="text-gray-600 text-center max-w-3xl mx-auto">
+                    CulipVideo 的团队由一群热爱技术、追求创新的开发者组成。我们专注于用户体验，不断优化我们的工具和服务，以满足用户的需求。
+                </p>
+            </div>
+            
+        </main>
+        <footer class="w-full py-8">
+            <div class="max-w-5xl mx-auto px-8">
+                <h3 class="text-xl font-medium text-transparent mb-4 text-center">相关链接</h3>
+                <div class="text-center flex justify-center gap-4"><a href="privacy.html" target="_blank" class="text-gray-400 hover:text-gray-600 text-m">Privacy Policy </a><span class="text-gray-400 text-m">|</span> <a href="terms_of_use.html" target="_blank" class="text-gray-400 hover:text-gray-600 text-m">Terms of Use </a>
+                    <span class="text-gray-400 text-m">|</span> <a href="https://saveany.cn/cdn-cgi/l/email-protection#fb888e8b8b94898fbb889a8d9e9a9582d59895" target="_blank" class="text-gray-400 hover:text-gray-600 text-m">Contact us</a></div>
+            </div>
+        </footer>
+    </div>
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
+
+</html>
