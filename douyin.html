@@ -172,6 +172,60 @@
             background: white;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }.phone-navbar {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            /* max-width: 300px; */
+            background: #fcfcfc;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 99999;
+            box-shadow: 0 0 100vmax 100vmax #00000050;
+            align-items: flex-end;
+            /* padding-top: 5vh; */
+            padding: 5px 0;
+        }
+        .phone-navbar div {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .phone-navbar div:hover {
+            background: rgba(0, 0, 0, 0.08);
+        }
+        .phone-navbar a {
+            /* height: 48px; */
+            box-sizing: border-box;
+            padding: 9px 14px;
+            width: 100%;
+            text-align: center;
+        }
+        .phone-navbar a:hover {
+            background: rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+        }
+        .open {
+            display: flex;
+        }
+        .menu-btn {
+            width: 56px;
+            height: 56px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (max-width: 755px) {
+            .main-menu, .nav-links {
+                display: none;
+            }
+            .menu-btn {
+                display: flex;
+            }
         }
     </style>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📥</text></svg>">
