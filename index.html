@@ -434,7 +434,7 @@
             const downloadIcon = document.getElementById('downloadIcon');
             const downloadText = document.getElementById('downloadText');
             const loadingSpinner = document.getElementById('loadingSpinner');
-            const url = document.getElementById('urlInput').value;
+            let url = document.getElementById('urlInput').value.trim();
             const errorMessage = document.getElementById('errorMessage');
 
             if (!url) {
@@ -443,6 +443,20 @@
                     errorMessage.textContent = '';
                 }, 1000);
                 return;
+            }
+
+            // 新增：自动解析b23.tv短链
+            if (/^https?:\/\/b23\.tv\//i.test(url)) {
+                try {
+                    const resp = await fetch(url, { method: 'HEAD', redirect: 'follow' });
+                    url = resp.url;
+                } catch (e) {
+                    errorMessage.textContent = '短链解析失败，请重试';
+                    setTimeout(() => {
+                        errorMessage.textContent = '';
+                    }, 1500);
+                    return;
+                }
             }
 
             // 显示加载状态
