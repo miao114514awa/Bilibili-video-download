@@ -458,6 +458,7 @@
                 const resultHtml = `
                     <p class="result-text"><strong>视频BV号：</strong>${downloadInfo.bvid}</p>
                     <p class="result-text"><strong>下载链接：</strong><a href="${downloadInfo.downloadUrl}.html" target="_blank" class="download-link"><span class="url-preview">${downloadInfo.downloadUrl.substring(0, 50)}...</span></a></p>
+                    <p class="result-test">点击上方链接下载</p>
                 `;
                 document.getElementById('downloadResult').innerHTML = resultHtml;
                 document.getElementById('videoInfo').style.display = 'block';
