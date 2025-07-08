@@ -459,6 +459,62 @@
             }, duration);
         }
 
+        // 自定义可关闭的静态消息弹出框
+        function showClosableToast(message, duration = 0) {
+            let toast = document.getElementById('customClosableToast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'customClosableToast';
+                toast.style.position = 'fixed';
+                toast.style.left = '50%';
+                toast.style.top = '20%';
+                toast.style.transform = 'translate(-50%, 0)';
+                toast.style.background = 'rgba(34,34,34,0.95)';
+                toast.style.color = '#fff';
+                toast.style.padding = '16px 32px';
+                toast.style.borderRadius = '10px';
+                toast.style.fontSize = '1.1rem';
+                toast.style.zIndex = '9999';
+                toast.style.boxShadow = '0 4px 16px rgba(0,0,0,0.15)';
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.3s';
+                toast.style.display = 'flex';
+                toast.style.alignItems = 'center';
+                // 关闭按钮
+                const closeBtn = document.createElement('span');
+                closeBtn.textContent = '×';
+                closeBtn.style.marginLeft = '16px';
+                closeBtn.style.cursor = 'pointer';
+                closeBtn.style.fontSize = '1.3em';
+                closeBtn.onclick = function() {
+                    toast.style.opacity = '0';
+                    toast.style.pointerEvents = 'none';
+                };
+                toast.appendChild(document.createTextNode(message));
+                toast.appendChild(closeBtn);
+                document.body.appendChild(toast);
+                setTimeout(() => {
+                    toast.style.opacity = '1';
+                    toast.style.pointerEvents = 'auto';
+                }, 10);
+            } else {
+                toast.childNodes[0].textContent = message;
+                toast.style.opacity = '1';
+                toast.style.pointerEvents = 'auto';
+            }
+            if (duration > 0) {
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                    toast.style.pointerEvents = 'none';
+                }, duration);
+            }
+        }
+
+        // 页面加载后自动弹出
+        window.addEventListener('DOMContentLoaded', function() {
+            showClosableToast('test');
+        });
+
         async function downloadVideo() {
             const downloadBtn = document.getElementById('downloadBtn');
             const downloadIcon = document.getElementById('downloadIcon');
